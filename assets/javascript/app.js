@@ -1,32 +1,27 @@
-$(document).ready(function() {
-//Create Array for Restaurants
-    var restaurants = [
-        'restaurant 1',
-        'restaurant 2',
-        'restaurant 3',
-    ];
-//Create Array for Tweets
-    var tweets = [
-        'tweet 1',
-        'tweet 2',
-        'tweet 3',
-    ];
-//Capture value for Search: Where
+$( document ).ready(function() {
 
-    //Link to OpenTable (Ajax Call) 
+    //arrays and variables
+var restaurants = [
+    'placeholder 1', 'placeholder 2', 'placeholder 3'
+]
 
-    //Result of Search from OpenTable (limit 10)
+//connecting to Opentable API
+    var queryURL = 'https://opentable.herokuapp.com/api';
 
-//Capture value for Search: What
+    $.ajax({
+        ///need to modify Line 13 with correct search query URL
+        url: queryURL,
+        method: 'GET'
+    }).then(function(response){
+        console.log(response);
+})
 
-    //Link to Twitter (AJAX)
 
-    //Create 'search phrase' from both WHERE and WHAT
 
-    //Results of 'search phrase' from Twitter
 
-//Display result of 'Where'
 
-//Display result of 'What'
+
+
+
 
 });
