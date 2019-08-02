@@ -1,27 +1,26 @@
-$( document ).ready(function() {
+var baseOpenTableUrl = 'https://opentable.herokuapp.com/api';
 
-    //arrays and variables
-var restaurants = [
-    'placeholder 1', 'placeholder 2', 'placeholder 3'
-]
+function doSmthWithRestaurants (restaurants) {
+    // do smth
+}
 
-//connecting to Opentable API
-    var queryURL = 'https://opentable.herokuapp.com/api';
-
+function getRestaurantsByZip (zip) {
     $.ajax({
         ///need to modify Line 13 with correct search query URL
-        url: queryURL,
+        url: baseOpenTableUrl + "/restaurants?zip=" + zip,
         method: 'GET'
-    }).then(function(response){
-        console.log(response);
-})
+    }).then(function (response) {
+        doSmthWithRestaurants(response.restaurants);
+        console.log(response.restaurants);
+    })
+}
 
+$(document).ready(function () {
 
-
-
-
-
-
-
+    $("#zip-code-button").on("click", function(event) {
+        event.preventDefault();
+        var zipCode = $('#zip-code-input').val().trim();
+        getRestaurantsByZip(zipCode);
+    });
 
 });
