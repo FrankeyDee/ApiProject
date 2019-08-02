@@ -1,0 +1,27 @@
+.title {
+    font-family: 'Chakra Petch', sans-serif;
+font-family: 'Exo 2', sans-serif;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Mali', cursive;
+font-family: 'Saira Extra Condensed', sans-serif;
+font-family: 'Lobster', cursive;
+color: azure;
+margin: 10px;
+border: 10px;
+align-content: center;
+}
+
+.jumbotron {
+    background-image: url('../images/bg.jpg');
+    background-size: 50%;
+    font-size: larger;
+
+}
+
+body {
+    background-color: slategrey;
+}
+
+.container {
+    align-content: center;
+}

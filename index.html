@@ -7,29 +7,193 @@
     
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
+
+        <!--Local CSS Stylesheet-->
+        <link rel="stylesheet" href="assets/css/stylesheet.css">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Chakra+Petch|Exo+2|Kaushan+Script|Lobster|Mali|Saira+Extra+Condensed&display=swap" rel="stylesheet">
+
         <title>ApiProject</title>
       </head>
       <body>
         
         <div class="container">
-               
-
-
-            <h1>Project Layout</h1>
+            <h1 class="title">Plans Tonight?</h1>
             <!-- Search form -->
-            <button type="button" class="opentable-button btn btn-secondary btn-sm">OpenTable</button>
+            <button type="button" class="opentable-button btn btn-secondary btn-sm btn-warning">OpenTable</button>
             <br>
             <br>
             <div class="opentable active-pink-3 active-pink-4 mb-4">
-                <input class="form-control" type="text" placeholder="Where..." aria-label="Search">
+                <input class="form-control" type="text" placeholder="City" aria-label="Search">
             </div>
             <!-- Search form -->
-            <button type="button" class="twitter-button btn btn-secondary btn-sm">Twitter</button>
+            <button type="button" class="tmaster-button btn btn-secondary btn-sm btn-info">Ticket Master</button>
             <br>
             <br>
-            <div class="twitter active-purple-3 active-purple-4 mb-4">
-                <input class="form-control" type="text" placeholder="What..." aria-label="Search">
+            <div class="tmaster active-purple-3 active-purple-4 mb-4">
+                <input class="form-control" type="text" placeholder="Food" aria-label="Search">
+            </div>
+
+            <div class="container">
+
+
+  <div class="container">
+
+        <!-- Jumbotron -->
+        <div class="jumbotron" style="color: white">
+          <h1 class="text-center title">Restaurant Results Below</h1>
+        </div>
+    
+        <div class="row">
+    
+          <div class="col-md-12">
+    
+            <!--Display results-->
+            <div class="card mb-4">
+              <div class="card-body">
+                <table class="table table-sm table-hover" id='employee-table'>
+                  <thead>
+                    <tr>
+                      <th scope="col" id="pic">Picture</th>
+                      <th scope="col" id="name">Name</th>
+                      <th scope="col" id="address">Address</th>
+                      <th scope="col" id="rating">Rating</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+            <!-- Jumbotron -->
+            <div class="jumbotron" style="color: white">
+                <h1 class="text-center title">Events Nearby</h1>
+              </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card mb-4">
+              <div class="card-body">
+                   <div class="form-group">
+                    <h2 id="picture">Picture</h2>
+                  </div>
+                  <div class="form-group">
+                        <h2 id="name">Name</h2>
+                      </div>
+                      <div class="form-group">
+                            <h2 id="address">Address</h2>
+                          </div>
+                          <div class="form-group">
+                                <h2 id="open-table">OpenTable</h2>
+                              </div>
+                  <div class="form-group">
+                        <div class="form-group">
+                                <h2 id="ticket-master">Ticket Master</h2>
+                              </div>
+                  <button class="btn btn-primary float-right" id="add-restaurant-btn">Submit</button>
+                
+    
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+            <div class="container">
+
+
+                    <!-- Employee Tracker -->
+  <div class="container">
+
+        <!-- Jumbotron -->
+        <div class="jumbotron" style="background-color: black; color: white">
+          <h1 class="text-center">Restaurant</h1>
+        </div>
+    
+        <div class="row">
+    
+          <div class="col-md-12">
+    
+            <!-- Current Employees-->
+            <div class="card mb-4">
+              <div class="card-header">Data Layout</div>
+              <div class="card-body">
+                <table class="table table-sm table-hover" id='employee-table'>
+                  <thead>
+                    <tr>
+                      <th scope="col">Picture</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Address</th>
+                      <th scope="col">Twitter</th>
+                      <th scope="col">Open Table</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="row">
+          <div class="col-md-12">
+            <!-- Add Employee  -->
+            <div class="card mb-4">
+              <div class="card-header">Info Output Below</div>
+              <div class="card-body">
+    
+                <!-- Entry Form -->
+                
+                  <div class="form-group">
+                    <h2 id="picture">Picture</h2>
+                  </div>
+                  <div class="form-group">
+                        <h2 id="name">Name</h2>
+                      </div>
+                      <div class="form-group">
+                            <h2 id="address">Address</h2>
+                          </div>
+                          <div class="form-group">
+                                <h2 id="open-table">OpenTable</h2>
+                              </div>
+                  <div class="form-group">
+                        <div class="form-group">
+                                <h2 id="ticket-master">Ticket Master</h2>
+                              </div>
+                  <button class="btn btn-primary float-right" id="add-restaurant-btn">Submit</button>
+                
+    
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+
+
+
+
+
+
+
+
+
+
             </div>
 
 
