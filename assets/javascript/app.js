@@ -1,32 +1,26 @@
-$(document).ready(function() {
-//Create Array for Restaurants
-    var restaurants = [
-        'restaurant 1',
-        'restaurant 2',
-        'restaurant 3',
-    ];
-//Create Array for Tweets
-    var tweets = [
-        'tweet 1',
-        'tweet 2',
-        'tweet 3',
-    ];
-//Capture value for Search: Where
+var baseOpenTableUrl = 'https://opentable.herokuapp.com/api';
 
-    //Link to OpenTable (Ajax Call) 
+function doSmthWithRestaurants (restaurants) {
+    // do smth
+}
 
-    //Result of Search from OpenTable (limit 10)
+function getRestaurantsByZip (zip) {
+    $.ajax({
+        ///need to modify Line 13 with correct search query URL
+        url: baseOpenTableUrl + "/restaurants?zip=" + zip,
+        method: 'GET'
+    }).then(function (response) {
+        doSmthWithRestaurants(response.restaurants);
+        console.log(response.restaurants);
+    })
+}
 
-//Capture value for Search: What
+$(document).ready(function () {
 
-    //Link to Twitter (AJAX)
-
-    //Create 'search phrase' from both WHERE and WHAT
-
-    //Results of 'search phrase' from Twitter
-
-//Display result of 'Where'
-
-//Display result of 'What'
+    $("#zip-code-button").on("click", function(event) {
+        event.preventDefault();
+        var zipCode = $('#zip-code-input').val().trim();
+        getRestaurantsByZip(zipCode);
+    });
 
 });
