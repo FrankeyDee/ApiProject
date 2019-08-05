@@ -46,7 +46,7 @@ function listEvents(events) {
     //console.log(url.name)
 }
 var api = "https://app.ticketmaster.com/discovery/v2/events.json?";
-var eventSize = "&size=3";
+var eventSize = "&size=5";
 //var latLong = "&latlong";
 //var laArea = "&classificationName=music&dmaId=324"
 //var countryCode = "&countryCode=US";
@@ -57,9 +57,7 @@ var zip = "postalCode=";
 var apiKey = "&apikey=4BGuvHwzMdA9AzDaqHDjGGVAV5oWB8m6";
 // ticket master api
 
-
-
-
+//get Ticketmaster info by zip code search//
 function getEventsByZip (zipCode) {
     $.ajax({
         type:"GET",
@@ -75,6 +73,7 @@ function getEventsByZip (zipCode) {
             // console.log(ticketmasterResults)
             if (ticketmasterResults._embedded && ticketmasterResults._embedded.events) {
                 var events = ticketmasterResults._embedded.events
+                console.log(ticketmasterResults);
             // console.log(json._embedded.events[0].name);  // output same as 45 below
             // create a loop for name, date and link
                 // listEvents(json);
@@ -85,10 +84,10 @@ function getEventsByZip (zipCode) {
                     var ticket = events[i];
                     var someObj = {
                         name: ticket.name,
-                        url: ticket.url,   
+                        url: ticket.url,
+                        date: ticket.dates.start.localDate,
+                        image: ticket.images[3].url,
                     };
-
-                    // <a href="https://www.w3schools.com">Visit W3Schools.com!</a>
 
                     placeLinkOnDOM(someObj);
                     
@@ -136,7 +135,9 @@ function getEventsByZip (zipCode) {
     /**
      * @param {
      *  name: string,
-     *  url: string
+     *  url: string,
+     *  date: string,
+     * 
      * }
      */
     // passing the name of the band
@@ -144,14 +145,21 @@ function placeLinkOnDOM(coolObj){
     // create empty link
     var listLink =  $("<li>");
     var ticketLink = $("<a>").text('Tickets for ' + coolObj.name);
+
+    var ticketImage = coolObj.image;
+    listLink.append('<img src="'+ ticketImage + '" width="200" height="150">');
     // document.createElement('a')
     // give link some content
     ticketLink.attr('href',  coolObj.url);
     ticketLink.attr('target', '_blank');
     // add attribute href to link
     listLink.append( ticketLink );
-    $('#ticket-links').append( listLink );
+    $('#ticket-links').append(listLink);
 
+    var ticketDate = coolObj.date;
+    listLink.append('<br> Date: ' + ticketDate);
+
+    
 }
 
 // On click for event information
