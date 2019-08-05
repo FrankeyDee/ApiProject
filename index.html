@@ -16,81 +16,55 @@
   <link
     href="https://fonts.googleapis.com/css?family=Chakra+Petch|Exo+2|Kaushan+Script|Lobster|Mali|Saira+Extra+Condensed&display=swap"
     rel="stylesheet">
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ 
+    <!-- jQuery, Popper.js, Bootstrap JS -->
   <script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+
+    <!-- Bootswatch CDN
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/slate/bootstrap.min.css" rel="stylesheet" integrity="sha384-FBPbZPVh+7ks5JJ70RJmIaqyGnvMbeJ5JQfEbW0Ac6ErfvEg9yG56JQJuMNptWsH" crossorigin="anonymous"> -->
+
   <title>Date Night Project #1</title>
 </head>
 
 <body>
 
   <div class="container">
-    <h1 class="title">Date Night</h1>
-    <!-- Search form -->
+    <!-- Jumbotron -->
+    <div class="header">
+        <h2 class="display-3">Date Night</h2>
+        <p class="lead">In the mood for a night out, but can't make up your mind? Enter the Zip Code of the area you would like to visit and click 'Search' to display restaurants and upcoming events available in the area. 
+    </div>
+    <!--Search Form-->
     <div class="opentable active-pink-3 active-pink-4 mb-4">
-      <input class="form-control" id="zip-code-input" type="text"  placeholder="Zip" aria-label="Search">
+      <input class="form-control" id="zip-code-input" type="text" placeholder="Zip" aria-label="Search">
     </div>
-    <button type="button" id="zip-code-button" class="opentable-button btn btn-secondary btn-sm btn-warning">Search</button>
-    <br>
-    <br>
-    <!-- Search form -->
-
-      <div class="container">
-
-        <!-- Jumbotron -->
-        <div class="jumbotron" style="color: white">
-          <h1 class="text-center title">Results</h1>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card mb-4">
-              <div class="card-body">
-                
-                <div class="form-group">
-                  <div id="open-table">
-                    <h2>OpenTable</h2>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <div class="form-group">
-                    <div id="ticket-master">
-                        <h2>Ticket Master</h2>
-                        <ul id="ticket-links">
-
-                        </ul>
-                        
-                    </div>
-                  </div>
-                </div>
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-
-
-
-      
-
-      <script src="assets/javascript/app.js"></script>
-
+      <button type="button" id="zip-code-button" class="btn btn-secondary btn-sm btn-warning">Search</button>
+      <br><br>
+    <div id="open-table">
+      <h2 class="title">Restaurants Recommended</h2>
     </div>
+    <div id="ticket-master">
+      <h2 class="title">Events Recommended</h2>
+        <ul id="ticket-links">
+        </ul>
+    </div>
+  </div>
+</div>
+<div class="footer">Information provided by:
+    <a 
+    class="btn btn-secondary btn-sm btn-warning" href="http://www.opentable.com" role="button" target="_blank">Open Table</a>
 
+    <a 
+    class="btn btn-secondary btn-sm btn-warning"href="http://www.ticketmaster.com" target="_blank" role="button">Ticket Master</a></p></div>
+<script src="assets/javascript/app.js"></script>
 </body>
-
-
 </html>
