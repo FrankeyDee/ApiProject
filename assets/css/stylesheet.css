@@ -3,6 +3,7 @@ body {
     background-size: 100%;
     background-repeat: repeat-y;
     background-position: center;
+    background-attachment:fixed;
 }
 
 .footer {
@@ -37,6 +38,9 @@ a:hover {
     color: azure;
     margin: 10px;
     border: 10px;
+    border-radius: 25px;
+    text-align: center;
+    
 }
 
 .display-3 {
@@ -52,13 +56,19 @@ a:hover {
     font-weight: 30;
 }
 
-..header {
-    background-color: rgba(102, 102, 153, 0.8);
+.form {
+    margin-left: 420px;
+}
+
+.header {
     color: azure;
-    font-size: medium;
-    align-content: center;
-    height: 300px;
-    padding: 0%;
+    font-size: large;
+    height: 250px;
+    margin-top: 50px;
+    padding-top: 50px;
+    border-radius: 25px;
+    text-align: left;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .container {
@@ -94,7 +104,6 @@ a:hover {
     color: azure;
 }
 
-.header {
-    margin-top: 50px;
-    padding-top: 50px;
+#ticket-links {
+    font-size: large;
 }
