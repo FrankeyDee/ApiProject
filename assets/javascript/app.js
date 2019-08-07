@@ -29,7 +29,7 @@ function getRestaurantsByZip (zip) {
         method: 'GET'
     })
     .then(function (response) {
-        
+        showOpenTableresults(response.restaurants);
         listRestaurants(response.restaurants);
     })
 
@@ -95,7 +95,7 @@ function getEventsByZip (zipCode) {
                 }
             } else {
                 // we didn't find events in you area
-                console.log('no events in your area');
+                alert('no events in your area');
             }
 
             // var band = listEvents(json._embedded.events[0].name);
@@ -162,6 +162,29 @@ function placeLinkOnDOM(coolObj){
     
 }
 
+function showOpenTableresults(tableArr) {
+    var $table = $( "<table></table>" );
+    var length = 0;
+    if( tableArr.length < 5 ) {
+        length = tableArr.length
+    } else {
+        length = 5;
+    }
+    for ( var i = 0; i < length; i++ ) {
+        var row = tableArr[i];
+        var $line = $( "<tr></tr>" );
+        $line.append( $( "<img src='" + row.image_url + "'/>" ) );
+        $line.append( $( "<td>" + row.name + "</td>" ) );
+        $line.append( $( "<td>" + row.address + "</td>" ) );
+        $line.append( $( "<td> </td>" ) ).append("<a target='_blank' href='"+ row.reserve_url + "'>reserve</a>");
+        
+        $table.append( $line );
+    }
+    $table.appendTo( $( "#open-table" ) );
+
+    
+}
+
 // On click for event information
 $(document).ready(function () {
 
@@ -176,6 +199,8 @@ $(document).ready(function () {
     });
 
 });
+
+
 
 // name.name
 // name.dates.access.startDateTime
