@@ -19,9 +19,9 @@ Opentable uses oAuth so we had to pull from an Opentable library created by a 3r
 
 SCREENSHOTS:
 
-<img src="./assets/images/datenite1.jpg">
-<img src="./assets/images/datenite2.jpg">
-<img src="./assets/images/datenite3.jpg">
-<img src="./assets/images/datenite4.jpg">
+<img src="./assets/images/dn1.JPG">
+<img src="./assets/images/dn2.JPG">
+<img src="./assets/images/dn3.JPG">
+
 
 https://spacejnk.github.io/ApiProject/
