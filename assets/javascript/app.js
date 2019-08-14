@@ -100,7 +100,7 @@ function showOpenTableresults(tableArr) {
         $line.append( $( "<img src='" + row.image_url + "'/>" ) );
         $line.append( $( "<td>" + row.name + "</td>" ) );
         $line.append( $( "<td>" + row.address + "</td>" ) );
-        $line.append( $( "<td> </td>" ) ).append("<a target='_blank' href='"+ row.reserve_url + "'>Reservat</a>");
+        $line.append( $( "<td> </td>" ) ).append("<a target='_blank' href='"+ row.reserve_url + "'>Make a Reservation</a>");
         
         $table.append( $line );
     }
